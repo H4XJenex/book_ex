@@ -1,0 +1,30 @@
+{{define "title"}}Войти в аккаунт{{end}}
+
+{{define "main"}}
+
+    <div class="center">
+
+
+    <div class="frm rgstr lgn">
+
+        <form action="/user/login" method="post" novalidate>
+            {{range .Form.NonFieldErrors}}
+                <label class="error">{{.}}</label>
+            {{end}}
+
+            {{with .Form.FieldErrors.email}}
+                <label class="error">{{.}}</label>
+            {{end}}
+            <input type="email" name="email" placeholder="Введите e-mail">
+
+            {{with .Form.FieldErrors.password}}
+                <label class="error">{{.}}</label>
+            {{end}}
+            <input type="password" name="password" placeholder="Введите пароль">
+
+            <button type="submit">Авторизоваться</button>
+        </form>
+
+    </div>
+    </div>
+{{end}}

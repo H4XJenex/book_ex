@@ -1,0 +1,15 @@
+
+server:
+  address: "localhost:8000"
+  idle_timeout: 60s
+  read_timeout: 5s
+  write_timeout: 10s
+
+# Command to get certificates
+# go run C:\Users\ezioe\sdk\go1.21.4\src\crypto\tls\generate_cert.go --rsa-bits=2048 --host=localhost
+
+#connStr := "postgres://postgres:123@localhost/webapp?sslmode=disable"
+# connStr := "user=postgres dbname=webapp password=123 sslmode=disable"
+database:
+  name: "postgres"
+  conn_str: "postgres://postgres:123@localhost/webapp?sslmode=disable"

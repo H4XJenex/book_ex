@@ -1,0 +1,33 @@
+{{define "title"}}Создать учетную запись{{end}}
+
+{{define "main"}} 
+
+    <div class="center">
+        <div class="frm rgstr">
+            <form action="/user/signup" method="post" novalidate>
+
+                {{/*            <label for="name"></label>*/}}
+                {{with .Form.FieldErrors.name}}
+                    <label class="error">{{.}}</label>
+                {{end}}
+                <input type="text" name="name" id="name" placeholder="Введите имя" value="{{.Form.Name}}">
+
+                {{/*            <label for="email"></label>*/}}
+                {{with .Form.FieldErrors.email}}
+                    <label class="error">{{.}}</label>
+                {{end}}
+                <input type="email" name="email" id="email" placeholder="Введите свой e-mail" value="{{.Form.Email}}">
+
+                {{/*            <label for="password"></label>*/}}
+                {{with .Form.FieldErrors.password}}
+                    <label class="error">{{.}}</label>
+                {{end}}
+                <input type="password" name="password" id="password" placeholder="Введите пароль">
+
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    
+{{end}}

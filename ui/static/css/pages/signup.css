@@ -1,0 +1,42 @@
+
+.rgstr input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+    color: #ffffff; !important;
+
+}
+
+::-webkit-input-placeholder {    color: #ffffff !important;  }
+
+.rgstr form > * {
+    margin: 15px;
+    font-family: Bellota Text, serif;
+}
+
+.rgstr button {
+    margin: 10px auto;
+    width: 150px;
+
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: #212121;
+}
+
+.rgstr button:hover {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.rgstr button:active {
+    outline: 2px solid #a2a2a2;
+}
+
+.rgstr input:focus-visible {
+    outline: none;
+}
+
+.rgstr .error {
+    margin: 0;
+    font-size: 12px;
+}

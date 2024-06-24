@@ -1,0 +1,38 @@
+{{define "nav"}}
+<nav>
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li>
+            <img src="/static/images/order-3.png" alt="">
+            <a href="/user/order">Заказы</a>
+        </li>
+        <li>
+            <img src="/static/images/cart-2.png" alt="">
+            <a href="/user/cart">Корзина</a>
+        </li>
+        {{if .IsAuthenticated}}
+
+            <li>
+                <img src="/static/images/person-4.png" alt="">
+                <a href="/user/account">Пользователь#{{.UserID}}</a>
+            </li>
+            <li>
+                <img src="/static/images/logout.png" alt="">
+                <form action="/user/logout" method="post">
+                    <button class="logout-btn">Выйти</button>
+                </form>
+            </li>
+        {{else}}
+{{/*            <li><a href="/user/signup">Зарегистрироваться</a></li>*/}}
+
+<li>
+    <img src="/static/images/person-4.png" alt="">
+    <a href="/user/login">Войти</a>
+</li>
+
+        {{end}}
+
+
+    </ul>
+</nav>
+{{end}}

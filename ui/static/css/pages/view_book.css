@@ -1,0 +1,79 @@
+.page {
+    margin: 60px 10% 0;
+    color: #000000;
+    /*background-color: #235789;*/
+}
+
+.page .bk-description {
+    margin: 40px 0;
+}
+
+
+.page h2{
+    margin: 0 0 10px;
+}
+
+.page a {
+    color: #1fb9d2;
+    text-decoration: none;
+}
+.page a:hover {
+    color: #0999af;
+}
+
+.page .bk-description {
+    width: 400px;
+}
+
+.chr table {
+    /*border-spacing: 20px 5px;*/
+    margin: 60px 0;
+}
+
+.chr h3 {
+    text-align: left;
+}
+
+.chr td {
+    padding: 5px 20px;
+}
+
+.chr th {
+    text-align: left;
+    color: #6b6b6b;
+    padding: 0;
+}
+
+/*
+ CSS FOR REVIEWS
+*/
+
+.show-rv {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.rev{
+    background-color: #e0ecff;
+    width: 30%;
+    min-width: 300px;
+    border-radius: 10px;
+
+    margin: 30px;
+}
+
+.rv-main {
+    padding: 0 20px;
+    overflow: auto;
+    height: 350px;
+
+}
+
+.rv-hdr,
+.rv-ftr{
+    padding: 10px;
+
+}

@@ -1,0 +1,42 @@
+
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{template "title" .}}</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+</head>
+<body>
+
+<header>
+    <div class="hd">
+        <h3>GOProj</h3>
+        <img src="/static/images/go_mascot.png" alt="go_mascot">
+    </div>
+    {{template "nav" .}}
+</header>
+<main>
+   <div class="fl-cont">
+       {{with .Flash}}
+           <div class="flash">{{.}}</div>
+       {{end}}
+       <div class="main-cont">
+           {{template "main" .}}
+       </div>
+   </div>
+</main>
+
+<footer>
+    <ul class="ftr">
+        <li><a href="#">Связаться с нами</a></li>
+        <li><a href="#">Текст</a></li>
+        <li><a href="#">Текст</a></li>
+    </ul>
+
+    <p>Текущий год - {{.CurrentYear}}</p>
+</footer>
+
+</body>
+</html>
+{{end}}

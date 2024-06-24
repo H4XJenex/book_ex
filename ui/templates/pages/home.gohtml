@@ -1,0 +1,51 @@
+{{define "title"}} Home {{end}}
+
+{{define "main"}}
+
+
+{{/*    <div class="show-rv">*/}}
+
+{{/*        {{range .Reviews}}*/}}
+{{/*            <div class="rev">*/}}
+{{/*                <div class="rv-hdr">*/}}
+{{/*                    <span>Title: {{.Title}}</span>*/}}
+{{/*                    <span>ID: {{.ID}}</span>*/}}
+{{/*                </div>*/}}
+
+{{/*                <div class="rv-main">*/}}
+{{/*                    <p>{{.Text}}</p>*/}}
+{{/*                </div>*/}}
+
+{{/*                <div class="rv-ftr">*/}}
+{{/*                    Published: {{.Published | humanDate}}*/}}
+{{/*                </div>*/}}
+{{/*            </div>*/}}
+{{/*        {{end}}*/}}
+{{/*    </div>*/}}
+    <div class="show-bks">
+        <h2></h2>
+        {{range .Books}}
+
+            <div class="book">
+               <div class="book-row">
+                   <div class="title">
+                       <a href="book/view/{{.ID}}">{{.Title}}</a>
+                   </div>
+                   <div class="author">
+                       {{.Author}}
+                   </div>
+               </div>
+                <div class="price">
+                    {{.Price}} ₽
+                </div>
+
+                <div class="btns">
+                    <button  type="button" id="buy-btn">Купить</button>
+                    <button id="fav-btn"></button>
+                </div>
+            </div>
+
+        {{end}}
+    </div>
+
+{{end}}

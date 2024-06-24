@@ -1,0 +1,23 @@
+{{define "title"}} Add item{{end}}
+
+{{define "main"}}
+<div class="center">
+    <div class="frm">
+        <form action="/review/create/book/{{.Form.BookID}}" method="post">
+            <label for="title"></label>
+            {{with .Form.FieldErrors.title}}
+                <label for="title" class="error">{{.}}</label>
+            {{end}}
+            <input type="text" name="title" id="title" placeholder="Введите заголовок обзора" value="{{.Form.Title}}"> <br>
+            <label for="text">Ваш обзор</label>
+            {{with .Form.FieldErrors.text}}
+                <label for="text" class="error">{{.}}</label>
+            {{end}}
+            <textarea name="text" id="text">{{.Form.Text}}</textarea><br>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+
+{{end}}

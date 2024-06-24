@@ -1,0 +1,72 @@
+{{define "title"}}{{.Book.Title}}{{end}}
+
+{{define "main"}}
+    <div class="page">
+        {{with .Book}}
+            <div class="bk">
+                <div class="bk-title">
+                    <h2>{{.Title}}</h2>
+                </div>
+
+                <div class="bk-author">
+                    <a href="#">{{.Author}}</a>
+                </div>
+
+                <div class="bk-description">
+                    {{.Description}}
+                </div>
+
+            </div>
+            {{end}}
+                <h3>Обзоры</h3>
+                {{if .IsAuthenticated}}
+                    <a href="/review/create/book/{{.Book.ID}}" id="rev">Добавить обзор</a>
+                {{end}}
+
+                {{range .Reviews}}
+                    <div class="rev">
+                        <div class="rv-hdr">
+                            <span>{{.Title}}</span>
+
+                        </div>
+
+                        <div class="rv-main">
+                            <p>{{.Text}}</p>
+                        </div>
+
+                        <div class="rv-ftr">
+                            Published: {{.Published | humanDate}}
+                        </div>
+                    </div>
+                {{end}}
+
+            {{with .Book}}
+            <div class="chr">
+                <table>
+                    <caption>
+                        <h3>Характеристики</h3>
+                    </caption>
+                    <tr>
+                        <th>ID товара</th>
+                        <td>{{.ID}}</td>
+                    </tr>
+
+                    <tr>
+                        <th>Год издания</th>
+                        <td>{{.PublicationYear}}</td>
+                    </tr>
+
+                    <tr>
+                        <th>Количество страниц</th>
+                        <td>{{.PageQuantity}}</td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+
+        {{end}}
+    </div>
+
+{{end}}

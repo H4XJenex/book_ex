@@ -1,0 +1,32 @@
+.item {
+    border: 1px solid #000;
+    background-color: rgb(124, 154, 250);
+    width: 30%;
+
+    color: white;
+
+    border-radius: 10px;
+}
+
+.hdr {
+    border-bottom: 1px solid #000;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.hdr span {
+    padding: 10px;
+}
+
+.dscr {
+    padding: 10px;
+    background-color: rgb(225, 232, 238);
+    color: #000;
+}
+
+.itm-ftr {
+    border-top: 1px solid black;
+    padding: 10px;
+}
